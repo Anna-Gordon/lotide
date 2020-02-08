@@ -21,22 +21,22 @@ function eqArrays(arr1, arr2) {
   return true;
 }
 
-console.log(eqArrays([[2, 3], [4]], [[2, 3], [4]])); // => true
 
-console.log(eqArrays([[2, 3], [4]], [[2, 3], [4, 5]])); // => false
-console.log(eqArrays([[2, 3], [4]], [[2, 3], 4]));
+const assertArraysEqual = function(array1, array2) {
+  if (eqArrays(array1, array2)) {
+    console.log("\x1b[32m%s\x1b[0m", `\tPASS ✅ Assertion Passed: ${array1} === ${array2}\n`);
+  } else {
+    console.log("\x1b[31m%s\x1b[0m", `\tFAIL 🛑 Assertion Failed: ${array1} !== ${array2}\n`);
+  }
+};
 
-// const assertArraysEqual = function(array1, array2) {
-//   if (eqArrays(array1, array2)) {
-//     console.log("\x1b[32m%s\x1b[0m", `\tPASS ✅ Assertion Passed: ${array1} === ${array2}\n`);
-//   } else {
-//     console.log("\x1b[31m%s\x1b[0m", `\tFAIL 🛑 Assertion Failed: ${array1} !== ${array2}\n`);
-//   }
-// };
+assertArraysEqual([1, 2, 3], [1, 2, 3]);
+assertArraysEqual([1, 2, 3], [3, 2, 1]);
 
-// assertArraysEqual([1, 2, 3], [1, 2, 3]);
-// assertArraysEqual([1, 2, 3], [3, 2, 1]);
+assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]);
+assertArraysEqual(["1", "2", "3"], ["1", "2", 3]);
 
-// assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]);
-// assertArraysEqual(["1", "2", "3"], ["1", "2", 3]);
+assertArraysEqual([[2, 3], [4]], [[2, 3], [4]]); // => true
 
+assertArraysEqual([[2, 3], [4]], [[2, 3], [4, 5]]); // => false
+assertArraysEqual([[2, 3], [4]], [[2, 3], 4]);
