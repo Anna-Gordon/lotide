@@ -15,7 +15,6 @@ const middle = function(array) {
 };
 
 const eqArrays = function (arr1, arr2){
-  console.log("arr2", arr2, "arr1", arr1)
 
   let isEquals = true;
   if(arr1.length === arr2.length){
