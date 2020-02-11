@@ -1,37 +1,39 @@
+const eqArrays = require('./eqArrays');
+const eqObjects = require('./eqObjects');
+const printResult = require('./printResult');
+// const eqObjects = function(obj1, obj2) {
 
-const eqObjects = function(obj1, obj2) {
-
-  if (Object.keys(obj1).length === Object.keys(obj2).length) {
-    for (let key of Object.keys(obj1)) {
-      if (obj1[key] === obj2[key])
-        if (Array.isArray(obj1[key]) && Array.isArray(obj2[key])) {
-          if (obj1[key].length === obj2[key].length) {
-            if (!eqArrays(obj1[key], obj2[key])) {
-              return false;
-            }
-          }
-        }
-    }
-  } else {
-    return false;
-  }
-  return true;
-};
+//   if (Object.keys(obj1).length === Object.keys(obj2).length) {
+//     for (let key of Object.keys(obj1)) {
+//       if (obj1[key] === obj2[key])
+//         if (Array.isArray(obj1[key]) && Array.isArray(obj2[key])) {
+//           if (obj1[key].length === obj2[key].length) {
+//             if (!eqArrays(obj1[key], obj2[key])) {
+//               return false;
+//             }
+//           }
+//         }
+//     }
+//   } else {
+//     return false;
+//   }
+//   return true;
+// };
   
-function eqArrays(arr1, arr2) {
+// function eqArrays(arr1, arr2) {
 
-  let isEquals = true;
+//   let isEquals = true;
 
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] === arr2[i]) {
-      isEquals;
-    } else {
-      isEquals = false;
-    }
-  }
+//   for (let i = 0; i < arr1.length; i++) {
+//     if (arr1[i] === arr2[i]) {
+//       isEquals;
+//     } else {
+//       isEquals = false;
+//     }
+//   }
 
-  return isEquals;
-}
+//   return isEquals;
+// }
 
 const assertObjectsEqual = function(obj1, obj2) {
   const inspect = require('util').inspect;
@@ -53,5 +55,7 @@ assertObjectsEqual(cd, dc);
 
 const abc = { a: "1", b: "2", c: "3" };
 assertObjectsEqual(ab, abc);
+
+module.exports = assertObjectsEqual;
 
 

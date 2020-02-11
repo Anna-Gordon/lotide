@@ -1,3 +1,6 @@
+const eqArrays = require('./eqArrays');
+const assertEqual = require('./assertEqual');
+
 const countOnly = function(allItems, itemsToCount) {
   
   const output = {};
@@ -15,30 +18,30 @@ const countOnly = function(allItems, itemsToCount) {
   return output;
 }
 
-const eqArrays = function(arr1, arr2) {
+// const eqArrays = function(arr1, arr2) {
 
-  let isEquals = true;
-  if (arr1.length === arr2.length) {
-    for (let i = 0; i < arr1.length; i++) {
-      if (arr1[i] === arr2[i]) {
-        isEquals;
-      } else {
-        isEquals = false;
-      }
-    }
-  } else {
-    isEquals = false;
-  }
-  return isEquals;
-};
+//   let isEquals = true;
+//   if (arr1.length === arr2.length) {
+//     for (let i = 0; i < arr1.length; i++) {
+//       if (arr1[i] === arr2[i]) {
+//         isEquals;
+//       } else {
+//         isEquals = false;
+//       }
+//     }
+//   } else {
+//     isEquals = false;
+//   }
+//   return isEquals;
+// };
 
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🍓🍓🍓 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌❌❌ Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+// const assertEqual = function(actual, expected) {
+//   if (actual === expected) {
+//     console.log(`🍓🍓🍓 Assertion Passed: ${actual} === ${expected}`);
+//   } else {
+//     console.log(`❌❌❌ Assertion Failed: ${actual} !== ${expected}`);
+//   }
+// };
 
 
 const firstNames = [
@@ -59,3 +62,5 @@ const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": t
 assertEqual(result1["Jason"], 1);
 assertEqual(result1["Karima"], undefined);
 assertEqual(result1["Fang"], 2);
+
+module.exports = countOnly;

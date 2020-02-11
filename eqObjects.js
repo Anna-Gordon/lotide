@@ -1,4 +1,4 @@
-
+const eqArrays = require('./eqArrays');
 
 const eqObjects = function(obj1, obj2) {
 
@@ -37,22 +37,22 @@ const eqObjects = function(obj1, obj2) {
   return true;
 };
   
-function eqArrays(arr1, arr2) {
+// function eqArrays(arr1, arr2) {
 
-  let isEquals = true;
+//   let isEquals = true;
 
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] === arr2[i]) {
-      isEquals;
-    } else {
-      isEquals = false;
-    }
-  }
+//   for (let i = 0; i < arr1.length; i++) {
+//     if (arr1[i] === arr2[i]) {
+//       isEquals;
+//     } else {
+//       isEquals = false;
+//     }
+//   }
 
-  return isEquals;
-}
+//   return isEquals;
+// }
 
-printResult = (eqObjects, actual,expected) => {
+const printResult = (eqObjects, actual,expected) => {
   if (eqObjects) {
     console.log(`:white_check_mark:Assertion passed: ${actual} === ${expected}`);
   } else {
@@ -64,18 +64,20 @@ const assertEqObjects = (obj1, obj2) => {
   printResult(isEqual, JSON.stringify(obj1), JSON.stringify(obj2))
 }
 
-// const ab = { a: "1", b: "2" };
-// const ba = { b: "2", a: "1" };
-// console.log(eqObjects(ab, ba)); // => true
+// // const ab = { a: "1", b: "2" };
+// // const ba = { b: "2", a: "1" };
+// // console.log(eqObjects(ab, ba)); // => true
 
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-console.log(eqObjects(cd, dc));
+// const cd = { c: "1", d: ["2", 3] };
+// const dc = { d: ["2", 3], c: "1" };
+// console.log(eqObjects(cd, dc));
 
-// const abc = { a: "1", b: "2", c: "3" };
-// console.log(eqObjects(ab, abc));
-console.log(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }));
-console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })) // => false
-console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }));
+// // const abc = { a: "1", b: "2", c: "3" };
+// // console.log(eqObjects(ab, abc));
+// console.log(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }));
+// console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })) // => false
+// console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }));
 
+module.exports = eqObjects;
+module.exports = printResult;
 
