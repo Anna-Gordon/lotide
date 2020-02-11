@@ -41,6 +41,6 @@ console.log(letterPositions('hello'));
 //   }
 // };
 
-assertArraysEqual(letterPositions("hello").l, [1]);
+// assertArraysEqual(letterPositions("hello").l, [1]);
 
 module.exports = letterPositions;

@@ -52,7 +52,7 @@ const eqObjects = function(obj1, obj2) {
 //   return isEquals;
 // }
 
-const printResult = (eqObjects, actual,expected) => {
+printResult = (eqObjects, actual,expected) => {
   if (eqObjects) {
     console.log(`:white_check_mark:Assertion passed: ${actual} === ${expected}`);
   } else {
@@ -79,5 +79,5 @@ const assertEqObjects = (obj1, obj2) => {
 // console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }));
 
 module.exports = eqObjects;
-module.exports = printResult;
+
 

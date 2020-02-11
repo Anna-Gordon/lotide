@@ -1,6 +1,5 @@
 const eqArrays = require('./eqArrays');
 const eqObjects = require('./eqObjects');
-const printResult = require('./printResult');
 // const eqObjects = function(obj1, obj2) {
 
 //   if (Object.keys(obj1).length === Object.keys(obj2).length) {
@@ -45,16 +44,16 @@ const assertObjectsEqual = function(obj1, obj2) {
   }
 };
 
-const ab = { a: "1", b: "2" };
-const ba = { b: "2", a: "1" };
-assertObjectsEqual(ab, ba);
+// const ab = { a: "1", b: "2" };
+// const ba = { b: "2", a: "1" };
+// assertObjectsEqual(ab, ba);
 
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-assertObjectsEqual(cd, dc);
+// const cd = { c: "1", d: ["2", 3] };
+// const dc = { d: ["2", 3], c: "1" };
+// assertObjectsEqual(cd, dc);
 
-const abc = { a: "1", b: "2", c: "3" };
-assertObjectsEqual(ab, abc);
+// const abc = { a: "1", b: "2", c: "3" };
+// assertObjectsEqual(ab, abc);
 
 module.exports = assertObjectsEqual;
 

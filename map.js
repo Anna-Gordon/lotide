@@ -37,8 +37,8 @@ const results1 = map(words, word => word[0]);
 //   }
 // };
 
-assertArraysEqual(results1, ["d", "g", "t", "t"]);
-assertArraysEqual(results1, [ 'g', 'c', 't', 'm', 't' ]);
-assertArraysEqual(results1, [ 'g', 'c', 't', 'd', 't' ]);
+// assertArraysEqual(results1, ["d", "g", "t", "t"]);
+// assertArraysEqual(results1, [ 'g', 'c', 't', 'm', 't' ]);
+// assertArraysEqual(results1, [ 'g', 'c', 't', 'd', 't' ]);
 
 module.exports = map;

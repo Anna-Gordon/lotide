@@ -39,11 +39,11 @@ const without = function(source, itemsToRemove) {
 // };
 
 
-let words = without(["hello", "world", "lighthouse"], ["hello", "lighthouse"]);
-let words1 = without(["1", "2", "3"], [1, 2, "3"]);
+// let words = without(["hello", "world", "lighthouse"], ["hello", "lighthouse"]);
+// let words1 = without(["1", "2", "3"], [1, 2, "3"]);
 
-assertArraysEqual(words, ["world"]);
-assertArraysEqual(words1, ["1", "2"]);
+// assertArraysEqual(words, ["world"]);
+// assertArraysEqual(words1, ["1", "2"]);
 
 module.exports = without;
 

@@ -6,7 +6,6 @@ const assertArraysEqual = require('./assertArraysEqual');
 const assertEqual = require('./assertEqual');
 const eqObjects = require('./eqObjects');
 const assertObjectsEqual = require('./assertObjectsEqual');
-const printResult = require('./printResult');
 const countLetters = require('./countLetters');
 const eqArrays = require('./eqArrays');
 const eqArrays_recursion = require('./eqArrays_recursion');
@@ -20,14 +19,13 @@ const takeUntil = require('./takeUntil');
 const without = require('./without');
 
 module.exports = {
-  head:   head,
-  tail:   tail,
-  middle: middle, 
+  head,
+  tail,
+  middle, 
   assertArraysEqual,
   assertEqual,
   eqObjects,
   assertObjectsEqual,
-  printResult,
   countLetters,
   eqArrays,
   eqArrays_recursion,

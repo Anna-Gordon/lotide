@@ -1,7 +1,7 @@
 
 const eqArrays = require('./eqArrays');
 const assertObjectsEqual = require('./assertObjectsEqual');
-const printResult = require('./printResult');
+
 
 const eqObjects_recursion = function(obj1, obj2) {
 
@@ -66,19 +66,19 @@ const eqObjects_recursion = function(obj1, obj2) {
 //   printResult(isEqual, JSON.stringify(obj1), JSON.stringify(obj2))
 // }
 
-const ab = { a: "1", b: "2" };
-const ba = { b: "2", a: "1" };
-assertEqObjects(ab, ba); // => true
+// const ab = { a: "1", b: "2" };
+// const ba = { b: "2", a: "1" };
+// assertEqObjects(ab, ba); // => true
 
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-assertEqObjects(cd, dc);
+// const cd = { c: "1", d: ["2", 3] };
+// const dc = { d: ["2", 3], c: "1" };
+// assertEqObjects(cd, dc);
 
-const abc = { a: "1", b: "2", c: "3" };
-assertEqObjects(ab, abc);
-assertEqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 });
-assertEqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }) // => false
-assertEqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 });
+// const abc = { a: "1", b: "2", c: "3" };
+// assertEqObjects(ab, abc);
+// assertEqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 });
+// assertEqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }) // => false
+// assertEqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 });
 
 module.exports = eqObjects_recursion;
 
